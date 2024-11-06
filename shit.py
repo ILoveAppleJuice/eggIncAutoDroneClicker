@@ -9,9 +9,9 @@ template = cv2.imread('cross.png')
 dim = template.shape
 
 bbox=(600,100,1320,900) # may need to adjust this depending on screen size
-targetColor = [184,140,68] # may also need to adjust this. This is the color of the box on the drone to look for
+targetColor = [193,152,79] # may also need to adjust this. This is the color of the box on the drone to look for
 
-boundary = (targetColor,targetColor)
+boundary = (targetColor, targetColor)
 
 params = cv2.SimpleBlobDetector.Params()
 
@@ -117,7 +117,7 @@ while True:
     frame = cv2.cvtColor(img,cv2.COLOR_RGB2BGR)
 
     
-    cv2.imshow("test", img)
+    cv2.imshow("test", mask)
 
     if cv2.waitKey(1) == ord("q"):
         break
