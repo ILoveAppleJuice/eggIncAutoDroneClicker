@@ -85,8 +85,8 @@ while True:
         
         extrapolatedPos = (int(pos[0] + speed[0]),int(pos[1] + speed[1]))
 
-        #pyautogui.moveTo(bbox[0] + extrapolatedPos[0], bbox[1] + extrapolatedPos[1])
-        #pyautogui.leftClick()
+        pyautogui.moveTo(bbox[0] + extrapolatedPos[0], bbox[1] + extrapolatedPos[1])
+        pyautogui.leftClick()
 
         mask = cv2.circle(mask,(int(pos[0] + speed[0]),int(pos[1] + speed[1])),5,(0,255,0),2)
         mask = cv2.line(mask,(int(pos[0]),int(pos[1])),(int(pos[0] + speed[0]),int(pos[1] + speed[1])),(0,255,0),2)
